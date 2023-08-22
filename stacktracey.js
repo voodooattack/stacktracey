@@ -130,7 +130,7 @@ class StackTracey {
 
             if ((planA = line.match (/at (.+) \(eval at .+ \((.+)\), .+\)/)) || // eval calls
                 (planA = line.match (/at (.+) \((.+)\)/)) ||
-                ((line.slice (0, 3) !== 'at ') && (planA = line.match (/(.*)@(.*)/)))) {
+                ((line.slice (0, 3) !== 'at ') && (planA = line.match (/(.*?)@(.*)/)))) {
 
                 callee         =  planA[1]
                 native         = (planA[2] === 'native')
